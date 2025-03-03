@@ -1,0 +1,104 @@
+\documentclass[a4paper,oneside,11pt]{book}
+
+\usepackage{amsbsy}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{epsfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[strict]{changepage}
+
+% Page Margins - Strath Requirement
+\usepackage[left=4cm,right=2.5cm,top=2cm,bottom=4cm,includehead,includefoot,headheight=15pt]{geometry}
+
+% Page Headers
+\usepackage{fancyhdr}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt} % optional
+%\fancyhead[L]{\nouppercase{\leftmark} \hfill Section \nouppercase{\rightmark}}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\cfoot{\thepage}
+\pagestyle{fancy}
+
+% Line Spacing
+%\def\baselinestretch{1.5} 
+\usepackage{setspace}
+\setstretch{1.5}
+
+% Place UoS Logo on Title Page (this package modifies the "\maketitle" command.)
+\usepackage{titling}
+\pretitle{%
+  \begin{flushright}
+  \vspace{-9.5cm}
+  \includegraphics[width=5cm]{strathlogo.jpg} \\[7cm]
+  \end{flushright}
+  \begin{center}
+  \LARGE
+}
+\posttitle{\end{center}}
+
+  \title{CS818 Assessment\\Factors impacting obesity rates\\[1ex]
+  \small Word count (from TexCount): 3241}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{/home/joebutler/Documents/Msc/CS818/assessment/CS818_obesity.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introduction}
+\input{introduction}
+
+\chapter{Data}
+\input{dataset}
+
+\chapter{Unsupervised Analysis}
+\input{unsupervised_analysis.tex}
+
+\chapter{Supervised Analysis}
+\input{supervised_analysis.tex}
+
+\chapter{Discussion}
+\input{discussion.tex}
+
+\chapter{Conclusion}
+\input{conclusion.tex}
+
+\chapter{Appendix}
+\section{Development environment}
+All analyses were implemented in Python 3.12, using Jupyter Notebooks and Neovim to write and test the code. The paper was written in Neovim using the VimTex plugin.  
+\section{Supplementary figures}
+\input{appendix.tex}
+
+\printbibliography
+
+\end{document}
