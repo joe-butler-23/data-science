@@ -4,7 +4,7 @@ Welcome to my **Data Science Portfolio**! This repository serves as a central hu
 
 ## 🔍 Featured Projects
 
-### 1️⃣ [Obesity Risk Analysis](https://github.com/yourusername/CS818-Obesity-Analysis](https://github.com/joe-butler-23/data-science/tree/main/Obesity-in-Latin-America)
+### 1️⃣ [Obesity Risk Analysis](https://github.com/joe-butler-23/data-science/tree/main/Obesity-in-Latin-America)
 - **Description:** A study of factors influencing obesity rates using supervised and unsupervised machine learning techniques.
 - **Techniques Used:** Exploratory Data Analysis (EDA), K-Means clustering, Decision Tree classification.
 - **Key Findings:** Identification of key lifestyle factors impacting obesity, cluster analysis for risk profiling.
